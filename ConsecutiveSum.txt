@@ -1,0 +1,49 @@
+#include <iostream>
+#define max 100000
+using namespace std;
+
+int a[max],t;
+unsigned long long int n,x;
+int lung = sizeof(a)/sizeof(a[0]);
+int l [max];
+
+int calc(int *a, int m)
+{
+    int sum = 0,t,k;
+    int stmax = (lung - m) - 1; 
+    for(int st=0;st <= stmax; st++)
+    {
+        for(int i = 0; i < m; i++)
+        {
+            sum = sum + a[st+i];
+        }
+        l[st] = sum;
+    }
+    return 0;   
+}
+
+int main()
+{   unsigned long long int j;
+	int count=0;
+	cin>>t;
+	for(int k=0;k<t;k++)
+	{
+    cin>>n>>x;
+    for(j=0;j<n;j++)
+    cin>>a[j];
+    for(int i=1;i<n;i++)
+    {
+    	for(unsigned long long int h=0;h<j;h++)
+    	{
+    	calc(a,h);
+    	if(l[h]==x)
+    	count++;
+    	}
+    }
+      if(count>0)
+       cout<<"NO";
+    	else
+    	cout<<"YES";
+}
+return 0;
+}

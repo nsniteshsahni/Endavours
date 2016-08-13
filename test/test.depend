@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1430061401 source:c:\users\nitesh\desktop\test\main.cpp
+	<iostream>
+	<conio.h>
+	<vector>
+
+1430377564 source:c:\users\nitesh\desktop\test\paradox.c
+	<stdio.h>
+
+1433437629 source:c:\users\nitesh\desktop\c++ projects\test\main.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+

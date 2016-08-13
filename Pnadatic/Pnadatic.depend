@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1430512799 source:c:\users\nitesh\desktop\pnadatic\main.cpp
+	<iostream>
+	<conio.h>
+

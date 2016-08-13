@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1446539486 source:c:\users\nitesh\desktop\c++ projects\arrayfrequencies\main.cpp
+	<iostream>
+	<algorithm>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1434394846 source:c:\users\nitesh\desktop\c++ projects\streak\main.cpp
+	<iostream>
+	<algorithm>
+

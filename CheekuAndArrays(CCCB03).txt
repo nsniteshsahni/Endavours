@@ -1,0 +1,119 @@
+<h3>CheekuAndArrays</h3> <br/>
+[Practice][1] <br/>
+[Contest][2] <br/>
+
+**Author:**  [Nitesh Sahni][3] <br/>
+**Tester :** [Nitesh Sahni][3] <br/>
+**Editorialist:** [Nitesh Sahni][3] <br/>
+
+<h3>DIFFICULTY:</h3>
+Simple
+
+<h3>PREREQUISITES: </h3>
+Basics,Implementation
+
+<h1>PROBLEM03(CCCB03) </h1>
+<p>Cheeku is a good guy,but not as intelligent as you,he has 2 arrays but sorted in descending order,he wants to merge these two arrays and hence create a new one but he is unable to to do so.Can you help him? </p>
+<p> </p>
+
+
+<h3>Input</h3>
+<p>First line contains an integer T, denoting the number of test cases.
+First line of each test case contains two space separated integers N and M, denoting the size of the two sorted arrays.
+Second line of each test case contains N space separated integers, denoting the first sorted array A.
+Third line of each test case contains M space separated integers, denoting the second array B.</p>
+
+
+<h3>Output</h3>
+<p>For each test case, print (N + M) space separated integer representing the merged array.</p>
+
+
+<h3>Constraints</h3>
+<p>1 <= T <= 100
+ 1 <= N, M <= 5*104
+ 0 <= Ai, Bi <= 109</p>
+
+<h3>Example</h3>
+<pre><b>Input:
+1
+4 5
+9 7 5 3
+8 6 4 2 0</b>
+
+<b>Output:
+9 8 7 6 5 4 3 2 0</b>
+
+</pre>
+<p> </p>
+<h3>Explanation</h3>
+<p><b>Seriously,You Need It?</b> ...</p>
+
+
+C Code
+
+#include <stdio.h>
+#define max 100000
+#define maxu 100000
+void merge(unsigned long int [],unsigned long int,unsigned long int[] ,unsigned long int,unsigned long int []);
+ 
+int main() 
+{
+  unsigned long int a[max], b[max], m, n, c, sorted[maxu],i,j,x;
+ int t;
+ scanf("%d",&t);
+ while(t--)
+ {
+  scanf("%lu", &m);
+  scanf("%lu", &n);
+  for (c = 0; c < m; c++) {
+    scanf("%lu", &a[c]);
+  }
+ 
+  for (c = 0; c < n; c++) {
+    scanf("%lu", &b[c]);
+  }
+ 
+  merge(a, m, b, n, sorted);
+ 
+ 
+  for (c = 0; c < m + n; c++) {
+   printf("%lu ", sorted[c]);
+  }
+ printf("\n");
+ }
+  return 0;
+}
+ 
+void merge(unsigned long int a[],unsigned long int m,unsigned long int b[],unsigned long int n,unsigned long int sorted[]) {
+  int i, j, k;
+ 
+  j = k = 0;
+ 
+  for (i = 0; i < m + n;) {
+    if (j < m && k < n) {
+      if (a[j] > b[k]) {
+        sorted[i] = a[j];
+        j++;
+      }
+      else {
+        sorted[i] = b[k];
+        k++;
+      }
+      i++;
+    }
+    else if (j == m) {
+      for (; i < m + n;) {
+        sorted[i] = b[k];
+        k++;
+        i++;
+      }
+    }
+    else {
+      for (; i < m + n;) {
+        sorted[i] = a[j];
+        j++;
+        i++;
+      }
+    }
+  }
+}

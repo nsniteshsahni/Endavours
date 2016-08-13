@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1445233654 source:c:\users\nitesh\desktop\c++ projects\powerset\main.cpp
+	<stdio.h>
+	<iostream>
+	<cmath>
+
