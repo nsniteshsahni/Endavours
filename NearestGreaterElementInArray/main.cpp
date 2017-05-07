@@ -5,12 +5,13 @@ void solve(int arr[],int size)
 {
  stack <int> s;
  s.push(arr[0]);
+ int temp;
  for(int i=1;i<size;i++)
  {
      if(!s.empty())
      {
-     int temp = s.top();
-     s.pop();
+      temp = s.top();
+      s.pop();
      while(temp<arr[i])
         {
           cout<<temp<<" -> "<<arr[i]<<endl;
@@ -27,14 +28,14 @@ void solve(int arr[],int size)
  }
   while (!s.empty())
 	{
-		printf("%d -> -1", s.top());
+		printf("%d -> -1\n", s.top());
 		s.pop();
 	}
 }
 
 int main()
 {
-    int arr[] = {4,5,2,25};
+    int arr[] = {13,7,6,12};
     solve(arr,4);
     return 0;
 }

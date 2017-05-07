@@ -54,7 +54,7 @@ void solve(int maze[ROWS][COLS])
 
 int main()
 {
-    int maze[ROWS][COLS]=    { {1, 1, 0, 0},
+    int maze[ROWS][COLS]=    { {1, 1, 1, 0},
                                {1, 1, 1, 1},
                                {0, 0, 1, 0},
                                {1, 1, 1, 1}
